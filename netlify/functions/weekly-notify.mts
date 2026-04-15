@@ -51,5 +51,5 @@ export default async function handler() {
 // };
 
 export const config: Config = {
-  schedule: "5 9 * * 3",
+  schedule: "26 9 * * 3", // 09:26 UTC = 15:26 Bishkek (UTC+6),
 };

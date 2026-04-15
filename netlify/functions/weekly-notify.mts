@@ -30,6 +30,18 @@ export default async function handler() {
   }
 
   console.log("Message sent:", result);
+
+  const res = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendPoll`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      chat_id: CHAT_ID,
+      question: "го футбол",
+      options: ["да", "нет"],
+      is_anonymous: false,
+    }),
+  });
+
   return new Response("OK", { status: 200 });
 }
 
@@ -39,5 +51,5 @@ export default async function handler() {
 // };
 
 export const config: Config = {
-  schedule: "5 15 * * 3",
+  schedule: "19 15 * * 3",
 };

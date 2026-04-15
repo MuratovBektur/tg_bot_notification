@@ -34,6 +34,10 @@ export default async function handler() {
 }
 
 // Каждую среду в 12:00 UTC (= 15:00 по Москве UTC+3)
+// export const config: Config = {
+//   schedule: "0 12 * * 3",
+// };
+
 export const config: Config = {
-  schedule: "0 12 * * 3",
+  schedule: "5 15 * * 3",
 };

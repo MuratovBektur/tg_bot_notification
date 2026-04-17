@@ -23,6 +23,7 @@ export default async function handler() {
   ];
 
   const mentions = MEMBERS.join(" ");
+  const Azamat = `<a href="tg://user?id=8534185220">Азамат</a>`;
 
   const response = await fetch(
     `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
@@ -31,7 +32,7 @@ export default async function handler() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         chat_id: CHAT_ID,
-        text: `${mentions}\nго футбол в субботу в 10?`,
+        text: `${mentions} ${Azamat}\nго футбол в субботу в 10?`,
         parse_mode: "HTML",
       }),
     },

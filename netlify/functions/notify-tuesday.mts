@@ -1,5 +1,5 @@
 import type { Config } from "@netlify/functions";
-import { sendFootballNotification } from "./_shared/telegram";
+import { sendFootballNotification } from "../lib/telegram";
 
 export default async function handler() {
   const basicMessage =  "го футбол завтра в 10?"

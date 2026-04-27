@@ -1,5 +1,5 @@
 import type { Config } from "@netlify/functions";
-import { sendFootballNotification } from "../lib/telegram";
+import { sendFootballNotification } from "../lib/telegram.mts";
 
 const Azamat = `<a href="tg://user?id=8534185220">Азамат</a>`;
 

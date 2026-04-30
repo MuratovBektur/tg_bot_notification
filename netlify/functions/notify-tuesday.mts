@@ -1,8 +1,10 @@
 import type { Config } from "@netlify/functions";
 import { sendFootballNotification } from "../lib/telegram.mts";
 
+const Azamat = `<a href="tg://user?id=8534185220">Азамат</a>`;
+
 export default async function handler() {
-  const basicMessage =  "го футбол завтра в 10?"
+  const basicMessage =  "го футбол завтра в 10:30?"
   return sendFootballNotification({
     members: [
       "@a_slave_of_habit",
@@ -13,16 +15,12 @@ export default async function handler() {
       "@Aitkul_M",
       "@ascetsanjar",
     ],
-    message: basicMessage,
+    message: `${Azamat}\n${basicMessage}`,
     pollQuestion: basicMessage,
     pollOptions: [
-      "с Мухаммедом — 4 команды",
-      "с Мухаммедом — 5 команд",
-      "FootballTime (Душанбинка) — 4 команды",
-      "FootballHub — 3 команды (возможно)",
-      "нет",
+      "Да",
+      "Нет",
     ],
-    allowsMultipleAnswers: true,
   });
 }
 

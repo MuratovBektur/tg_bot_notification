@@ -4,7 +4,7 @@ import { sendFootballNotification } from "../lib/telegram.mts";
 const Azamat = `<a href="tg://user?id=8534185220">Азамат</a>`;
 
 export default async function handler() {
-  const basicMessage =  "го футбол завтра в 10:30?"
+  const basicMessage =  "го футбол завтра в 10:00?"
   return sendFootballNotification({
     members: [
       "@a_slave_of_habit",
